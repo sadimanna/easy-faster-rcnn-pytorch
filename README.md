@@ -1,4 +1,4 @@
-# easy-faster-rcnn.pytorch
+# easy-faster-rcnn-pytorch
 
 An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) in PyTorch.
 
