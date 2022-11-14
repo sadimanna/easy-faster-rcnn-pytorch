@@ -7,7 +7,7 @@ from typing import Optional
 
 import torch
 import torch.nn as nn
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 from torch import optim
 from torch.utils.data import DataLoader
 
