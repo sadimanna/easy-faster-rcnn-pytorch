@@ -12,7 +12,8 @@ from bbox import BBox
 from extension.functional import beta_smooth_l1_loss
 from roi.pooler import Pooler
 from rpn.region_proposal_network import RegionProposalNetwork
-from support.layer.nms import nms
+#from support.layer.nms import nms
+from torchvision.ops import nms
 
 
 class Model(nn.Module):
