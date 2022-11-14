@@ -5,7 +5,8 @@ import unittest
 import numpy as np
 import torch
 
-from support.layer.nms import nms
+# from support.layer.nms import nms
+from torchvision.ops import nms
 
 
 class TestNMS(unittest.TestCase):
