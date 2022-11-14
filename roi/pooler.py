@@ -4,7 +4,8 @@ import torch
 from torch import Tensor
 from torch.nn import functional as F
 
-from support.layer.roi_align import ROIAlign
+# from support.layer.roi_align import ROIAlign
+from torchvision.ops import RoIAlign as ROIAlign
 
 
 class Pooler(object):
