@@ -127,8 +127,8 @@ class VOC2007(Base):
             try:
                 path_to_cache_dir = os.path.join('caches', 'voc2007')
                 os.makedirs(path_to_cache_dir, exist_ok=True)
-                _, _, ap = voc_eval(detpath=os.path.join(path_to_results_dir, 'comp3_det_test_{:s}.txt'.format(category)),
-                                    annopath=os.path.join(path_to_annotations_dir, '{:s}.xml'),
+                _, _, ap = voc_eval(detpath=path_to_results_dir+'/comp3_det_test_{:s}.txt'.format(category),
+                                    annopath=path_to_annotations_dir+'/{:s}.xml',
                                     imagesetfile=os.path.join(path_to_main_dir, 'test.txt'),
                                     classname=category,
                                     cachedir=path_to_cache_dir,
