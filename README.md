@@ -1,9 +1,28 @@
 # easy-faster-rcnn-pytorch
 
+## Forked from [potterhsu/easy-faster-rcnn.pytorch](github.com/potterhsu/easy-faster-rcnn.pytorch)
+
+### Changes
+
+- Changes made are primarily due to issues caused during building *nms* and *ROIAlign*, because of now deprecated 'THC/THC.h'.
+- Replaced those two functions with *torchvision.ops.nms* and *torchvision.ops.RoIAlign*, respectively.
+- However, if the version of CUDA matches anyone's environment, these changes may not be needed.
+- Replaced *tensorboardX* with *torch.utils.tensorboard*
+
 An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) in PyTorch.
 
+## Features
 
-## Demo
+* Runs withour error on environment with PyTorch 1.12 compiled with CUDA 11.3
+* Supports `PASCAL VOC 2007` and `MS COCO 2017` datasets
+* Supports `ResNet-18`, `ResNet-50` and `ResNet-101` backbones (from official PyTorch model)
+* Supports `ROI Pooling` and `ROI Align` pooler modes
+* Supports `Multi-Batch` and `Multi-GPU` training
+* Matches the performance reported by the original paper
+* It's efficient with maintainable, readable and clean code
+
+
+<!--- ## Demo
 
 ![](images/demo-result.jpg)
 
@@ -13,16 +32,8 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
     ```
     $ python infer.py -s=coco2017 -b=resnet101 -c=/path/to/checkpoint.pth --image_min_side=800 --image_max_side=1333 --anchor_sizes="[64, 128, 256, 512]" --rpn_post_nms_top_n=1000 /path/to/input/image.jpg /path/to/output/image.jpg
     ```
+-->
 
-## Features
-
-* Supports PyTorch 1.0
-* Supports `PASCAL VOC 2007` and `MS COCO 2017` datasets
-* Supports `ResNet-18`, `ResNet-50` and `ResNet-101` backbones (from official PyTorch model)
-* Supports `ROI Pooling` and `ROI Align` pooler modes
-* Supports `Multi-Batch` and `Multi-GPU` training
-* Matches the performance reported by the original paper
-* It's efficient with maintainable, readable and clean code
 
 
 ## Benchmarking
@@ -167,8 +178,8 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
         </tr>
         <tr>
             <td>
-                <a href="https://drive.google.com/open?id=1IQSqnLFKduZaYcq06lZmYd_e7qbH3cxZ">
-                    Ours
+                <a href="https://github.com/pottershu/easy-faster-rcnn.pytorch">
+                    pottershu/easy-faster-rcnn.pytorch
                 </a>
             </td>
             <td>ResNet-101</td>
@@ -198,6 +209,40 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>0.3333</td>
             <td>500</td>
             <td><b>22500</b></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">
+                    Ours
+                </a>
+            </td>
+            <td>ResNet-101</td>
+            <td>GTX 3080 Ti</td>
+            <td>1</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>0.7503</td>
+            <td>600</td>
+            <td>1000</td>
+            <td>[(1, 2), (1, 1), (2, 1)]</td>
+            <td>[128, 256, 512]</td>
+            <td>pool</td>
+            <td>12000</td>
+            <td>2000</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>1.0</td>
+            <td>1.0</td>
+            <td><b>1</b></td>
+            <td><b>0.001</b></td>
+            <td>0.9</td>
+            <td>0.0005</td>
+            <td><b>[50000, 70000]</b></td>
+            <td>0.1</td>
+            <td>-</td>
+            <td>0</td>
+            <td><b>90000</b></td>
         </tr>
     </table>
 
@@ -423,18 +468,18 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 
 ## Requirements
 
-* Python 3.6
-* torch 1.0
-* torchvision 0.2.1
+* Python 3.6 and above
+* torch 1.12
+* torchvision 0.13.0
 * tqdm
     ```
     $ pip install tqdm
     ```
 
-* tensorboardX
+<!---* tensorboardX
     ```
     $ pip install tensorboardX
-    ```
+    ```-->
     
 * OpenCV 3.4 (required by `infer_stream.py`)
     ```
@@ -513,7 +558,9 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
                     - ...
             ```
 
-1. Build `Non Maximum Suppression` and `ROI Align` modules (modified from [facebookresearch/maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark))
+#### Next step is not required if the changes mentioned at the beginning of this document has already been made. The next step may throw an error due to discrepancy between the version of CUDA the user has nad the version this code was originally used to compile.
+
+2. Build `Non Maximum Suppression` and `ROI Align` modules (modified from [facebookresearch/maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark))
 
     1. Install
 
@@ -537,7 +584,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 
             ![](images/test_nms.png?raw=true)
 
-1. Install `pycocotools` for `MS COCO 2017` dataset
+3. Install `pycocotools` for `MS COCO 2017` dataset
 
     1. Clone and build COCO API
 
