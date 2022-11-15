@@ -183,6 +183,8 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>500</td>
             <td><b>22500</b></td>
         </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
         <tr>
             <td>
                 <a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">
