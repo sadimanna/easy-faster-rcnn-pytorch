@@ -298,8 +298,8 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>1</td>
             <td>1</td>
             <td>16.7</td>
-            <td>-</td>
-            <td>0.xxxx</td>
+            <td>26.96</td>
+            <td>0.7417</td>
             <td>600</td>
             <td>1000</td>
             <td>[(1, 2), (1, 1), (2, 1)]</td>
