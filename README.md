@@ -287,6 +287,40 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>0</td>
             <td><b>90000</b></td>
         </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">
+                    Ours
+                </a>
+            </td>
+            <td>ResNet-50</td>
+            <td>GTX 3080 Ti</td>
+            <td>1</td>
+            <td>1</td>
+            <td>16.7</td>
+            <td>-</td>
+            <td>0.xxxx</td>
+            <td>600</td>
+            <td>1000</td>
+            <td>[(1, 2), (1, 1), (2, 1)]</td>
+            <td>[128, 256, 512]</td>
+            <td>align</td>
+            <td>12000</td>
+            <td>2000</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>1.0</td>
+            <td>3.0</td>
+            <td><b>1</b></td>
+            <td><b>0.001</b></td>
+            <td>0.9</td>
+            <td>0.0001</td>
+            <td><b>[50000, 70000]</b></td>
+            <td>0.1</td>
+            <td>-</td>
+            <td>0</td>
+            <td><b>90000</b></td>
+        </tr>
     </table>
 
 * MS COCO 2017
