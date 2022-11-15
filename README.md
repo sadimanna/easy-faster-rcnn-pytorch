@@ -45,34 +45,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 
     <table>
         <tr>
-            <th>Implementation</th>
-            <th>Backbone</th>
-            <th>GPU</th>
-            <th>#GPUs</th>
-            <th>#Batches/GPU</th>
-            <th>Training Speed (FPS)</th>
-            <th>Inference Speed (FPS)</th>
-            <th>mAP</th>
-            <th>image_min_side</th>
-            <th>image_max_side</th>
-            <th>anchor_ratios</th>
-            <th>anchor_sizes</th>
-            <th>pooler_mode</th>
-            <th>rpn_pre_nms_top_n (train)</th>
-            <th>rpn_post_nms_top_n (train)</th>
-            <th>rpn_pre_nms_top_n (eval)</th>
-            <th>rpn_post_nms_top_n (eval)</th>
-            <th>anchor_smooth_l1_loss_beta</th>
-            <th>proposal_smooth_l1_loss_beta</th>
-            <th>batch_size</th>
-            <th>learning_rate</th>
-            <th>momentum</th>
-            <th>weight_decay</th>
-            <th>step_lr_sizes</th>
-            <th>step_lr_gamma</th>
-            <th>warm_up_factor</th>
-            <th>warm_up_num_iters</th>
-            <th>num_steps_to_finish</th>
+            <th>Implementation</th> <th>Backbone</th> <th>GPU</th> <th>#GPUs</th> <th>#Batches/GPU</th> <th>Training Speed (FPS)</th> <th>Inference Speed (FPS)</th> <th>mAP</th> <th>image_min_side</th> <th>image_max_side</th> <th>anchor_ratios</th> <th>anchor_sizes</th> <th>pooler_mode</th> <th>rpn_pre_nms_top_n (train)</th> <th>rpn_post_nms_top_n (train)</th> <th>rpn_pre_nms_top_n (eval)</th> <th>rpn_post_nms_top_n (eval)</th> <th>anchor_smooth_l1_loss_beta</th> <th>proposal_smooth_l1_loss_beta</th> <th>batch_size</th> <th>learning_rate</th> <th>momentum</th> <th>weight_decay</th> <th>step_lr_sizes</th> <th>step_lr_gamma</th> <th>warm_up_factor</th> <th>warm_up_num_iters</th> <th>num_steps_to_finish</th>
         </tr>
         <tr>
             <td>
@@ -220,7 +193,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>GTX 3080 Ti</td>
             <td>1</td>
             <td>1</td>
-            <td>-</td>
+            <td>8.2</td>
             <td>-</td>
             <td>0.7503</td>
             <td>600</td>
@@ -243,6 +216,40 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
             <td>-</td>
             <td>0</td>
             <td><b>90000</b></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">
+                    Ours
+                </a>
+            </td>
+            <td>ResNet-101</td>
+            <td>GTX 3080 Ti</td>
+            <td>1</td>
+            <td>1</td>
+            <td>8.2</td>
+            <td>-</td>
+            <td>0.7493</td>
+            <td>600</td>
+            <td>1000</td>
+            <td>[(1, 2), (1, 1), (2, 1)]</td>
+            <td>[128, 256, 512]</td>
+            <td>pool</td>
+            <td>12000</td>
+            <td>2000</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>1.0</td>
+            <td>3.0</td>
+            <td><b>1</b></td>
+            <td><b>0.001</b></td>
+            <td>0.9</td>
+            <td>0.0005</td>
+            <td><b>[50000]</b></td>
+            <td>0.1</td>
+            <td>-</td>
+            <td>0</td>
+            <td><b>70000</b></td>
         </tr>
     </table>
 
@@ -368,7 +375,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
         <tr>
             <td>
                 <a href="https://drive.google.com/open?id=1d-t7sR0-9dyRQvEbisklzoOkTibGMOY8">
-                    Ours
+                    potterhsu/easy-faster-rcnn.pytorch
                 </a>
             </td>
             <td>ResNet-101</td>
@@ -407,7 +414,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
         <tr>
             <td>
                 <a href="https://drive.google.com/open?id=1faXOZXtImWfAXzfgpE6q5-2VP2lw39q1">
-                    Ours
+                    potterhsu/easy-faster-rcnn.pytorch
                 </a>
             </td>
             <td>ResNet-101</td>
