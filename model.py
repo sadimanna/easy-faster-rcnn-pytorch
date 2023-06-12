@@ -99,7 +99,7 @@ class Model(nn.Module):
             self._transformer_normalize_std = torch.tensor([.1, .1, .2, .2], dtype=torch.float)
 
         def forward(self, features: Tensor, proposal_bboxes: Tensor,
-                    gt_classes_batch: Optional[Tensor] = None, gt_bboxes_batch: Optional[Tensor] = None) -> Union[Tuple[Tensor, Tensor], Tuple[Tensor, Tensor, Tensor, Tensor]]:
+                    gt_classes_batch: Optional[Tensor] = None, gt_bboxes_batch: Optional[Tensor] = None) -> Union[Tuple[Tensor, Tensor], Tuple[Tensor, Tensor, Tensor, Tensor]]):
             batch_size = features.shape[0]
 
             if not self.training:
