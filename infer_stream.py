@@ -67,7 +67,7 @@ def _infer_stream(path_to_input_stream_endpoint: str, period_of_inference: int, 
             fps = 1 / elapse
             cv2.putText(frame, f'FPS = {fps:.1f}', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
 
-            cv2.imshow('easy-faster-rcnn.pytorch', frame)
+            cv2.imshow('easy-faster-rcnn-pytorch', frame)
             if cv2.waitKey(10) == 27:
                 break
 
