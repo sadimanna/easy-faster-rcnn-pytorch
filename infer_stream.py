@@ -30,7 +30,10 @@ def _infer_stream(path_to_input_stream_endpoint: str, period_of_inference: int, 
 
     with torch.no_grad():
         for sn in itertools.count(start=1):
-            _, frame = video_capture.read()
+            success, frame = video_capture.read()
+            
+            if not success:
+                break
 
             if sn % period_of_inference != 0:
                 continue
