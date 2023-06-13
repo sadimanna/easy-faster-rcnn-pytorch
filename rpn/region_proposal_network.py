@@ -7,7 +7,7 @@ from torch.nn import functional as F
 
 from bbox import BBox
 from extension.functional import beta_smooth_l1_loss
-from support.layer.nms import nms
+from torchvision.ops import nms
 
 
 class RegionProposalNetwork(nn.Module):
