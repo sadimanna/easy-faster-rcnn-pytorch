@@ -11,7 +11,7 @@ class Config(object):
 
     ANCHOR_RATIOS: List[Tuple[int, int]] = [(1, 2), (1, 1), (2, 1)]
     ANCHOR_SIZES: List[int] = [128, 256, 512]
-    POOLER_MODE: Pooler.Mode = Pooler.Mode.ALIGN
+    POOLER_MODE: Pooler.Mode = Pooler.Mode.POOLING
 
     @classmethod
     def describe(cls):
