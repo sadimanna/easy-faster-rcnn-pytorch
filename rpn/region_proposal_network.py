@@ -70,7 +70,7 @@ class RegionProposalNetwork(nn.Module):
             # select 256 x `batch_size` samples
             fg_indices = (labels == 1).nonzero()
             bg_indices = (labels == 0).nonzero()
-            fg_indices = fg_indices[torch.randperm(len(fg_indices))[:min(len(fg_indices), 128 * batch_size)]]
+            fg_indices = fg_indices[torch.randperm(len(fg_indices))[:min(len(fg_indices), 256 * batch_size)]]
             bg_indices = bg_indices[torch.randperm(len(bg_indices))[:256 * batch_size - len(fg_indices)]]
             selected_indices = torch.cat([fg_indices, bg_indices], dim=0)
             selected_indices = selected_indices[torch.randperm(len(selected_indices))].unbind(dim=1)
