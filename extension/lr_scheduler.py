@@ -15,7 +15,9 @@ class WarmUpMultiStepLR(MultiStepLR):
         if self.last_epoch < self.num_iters:
             alpha = self.last_epoch / self.num_iters
             factor = (1 - self.factor) * alpha + self.factor
+            return [lr * factor for lr in super()._get_closed_form_lr()]
         else:
             factor = 1
-
-        return [lr * factor for lr in super().get_lr()]
+            return [lr for lr in super().get_lr()]
+        
+        return [lr * factor for lr in super()._get_closed_form_lr()]
