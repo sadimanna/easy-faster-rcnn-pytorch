@@ -24,16 +24,17 @@ class Evaluator(object):
                 image_batch = image_batch.cuda()
                 assert image_batch.shape[0] == 1, 'do not use batch size more than 1 on evaluation'
 
-                detection_bboxes, detection_classes, detection_probs, detection_batch_indices = \
-                    model.eval().forward(image_batch)
+                detection_bboxes, detection_classes, detection_probs, detection_batch_indices = model.eval().forward(image_batch)
 
                 scale_batch = scale_batch[detection_batch_indices].unsqueeze(dim=-1).expand_as(detection_bboxes).to(device=detection_bboxes.device)
                 detection_bboxes = detection_bboxes / scale_batch
 
                 kept_indices = (detection_probs > 0.05).nonzero().view(-1)
                 detection_bboxes = detection_bboxes[kept_indices]
+                detection_classes = detection_classes.to(device=detection_bboxes.device)
                 detection_classes = detection_classes[kept_indices]
                 detection_probs = detection_probs[kept_indices]
+                detection_batch_indices = detection_batch_indices.to(device=detection_bboxes.device)
                 detection_batch_indices = detection_batch_indices[kept_indices]
 
                 all_detection_bboxes.extend(detection_bboxes.tolist())
