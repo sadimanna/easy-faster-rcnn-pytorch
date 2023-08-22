@@ -52,9 +52,9 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-101|GTX 3080 Ti|1|1|8.2|24.2|0.7503|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|pooling|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0005|[50000, 70000]|0.1|-|0|90000|
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-101|GTX 3080 Ti|1|1|8.2|24.2|0.7493|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|pooling|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0005|[50000]|0.1|-|0|70000|
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-101|GTX 3080 Ti|1|1|8.2|23.9|0.7567|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
-|<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|GTX 3080 Ti|1|1|16.7|26.96|0.7417|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
+|<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|**GTX 3080 Ti**|1|1|16.7|26.96|**0.7417**|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|GTX 2080 Ti|1|1|6.5|7.5|0.7342|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|pooling|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
-|<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|GTX 2080 Ti|1|1|11.3|-|-|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
+|<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|**GTX 2080 Ti**|1|1|10.9|17.33|**0.7412**|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
 
 * MS COCO 2017
 
