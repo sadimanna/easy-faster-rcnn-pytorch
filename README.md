@@ -13,13 +13,13 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 
 ## Features
 
-* Runs withour error on environment with PyTorch 1.12 compiled with CUDA 11.3
+* Runs without error in an environment with torch-1.12+cuda11.3 and torch-2.0.1+cuda11.7
 * Supports `PASCAL VOC 2007` and `MS COCO 2017` datasets
 * Supports `ResNet-18`, `ResNet-50` and `ResNet-101` backbones (from official PyTorch model)
 * Supports `ROI Pooling` and `ROI Align` pooler modes
 * Supports `Multi-Batch` and `Multi-GPU` training
 * Matches the performance reported by the original paper
-* It's efficient with maintainable, readable and clean code
+* It's efficient with maintainable, readable, and clean code
 
 
 <!--- ## Demo
@@ -53,6 +53,7 @@ An easy implementation of [Faster R-CNN](https://arxiv.org/pdf/1506.01497.pdf) i
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-101|GTX 3080 Ti|1|1|8.2|24.2|0.7493|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|pooling|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0005|[50000]|0.1|-|0|70000|
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-101|GTX 3080 Ti|1|1|8.2|23.9|0.7567|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
 |<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|GTX 3080 Ti|1|1|16.7|26.96|0.7417|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
+|<a href="https://github.com/sadimanna/easy-faster-rcnn-pytorch">Ours</a>|ResNet-50|GTX 2080 Ti|1|1|6.5|7.5|-|600|1000|[(1, 2), (1, 1), (2, 1)]|[128, 256, 512]|align|12000|2000|6000|300|1.0|1.0|1|0.001|0.9|0.0001|[50000, 70000]|0.1|-|0|90000|
 
 * MS COCO 2017
 
